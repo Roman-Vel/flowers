@@ -1,0 +1,590 @@
+@font-face {
+    font-family: 'Gotham Pro Light';
+    src: url('../fonts/GothamPro-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../fonts/GothamPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro Medium';
+    src: url('../fonts/GothamPro-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// for standart 
+@body-bg-color: #292929;
+@body-text-color: #fff;
+@phone-color: #fff;
+//for white
+@body-bg-color-white: #292929;
+@body-text-color-black: #000;
+@color-black: #9b9b9b;
+//-------------
+@header-callback-color: #ff3469;
+@callback-color-black: #000;
+@button-bg-color: #ff2e55;
+@button-text-color: #fff;
+@review-bg_1: #000 url(../img/reviews/review-bg_1.png);
+@review-bg_2: #000 url(../img/reviews/review-bg_2.png);
+@review-bg_3: #000 url(../img/reviews/review-bg_3.png);
+@review-bg_4: #000 url(../img/reviews/review-bg_4.png);
+@review-bg_5: #000 url(../img/reviews/review-bg_5.png);
+
+// ---------------------
+
+
+.gotham_light() {
+    font-family: 'Gotham Pro Light', sans-serif;
+    font-weight: normal;
+}
+
+.gotham_pro() {
+    font-family: 'Gotham Pro Regular', sans-serif;
+    font-weight: normal;
+}
+
+.gotham_med() {
+    font-family: 'Gotham Pro Medium', sans-serif;
+    font-weight: normal;
+}
+
+// ----------------
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    .gotham_pro();
+    background-color: @body-bg-color;
+    color: @body-text-color;
+    margin: 0;
+}
+
+.description {
+    .gotham_pro();
+    letter-spacing: 0.12px;
+    font-size: 12px;
+}
+
+.text-color-red {
+    .gotham_med;
+    color: #ff3469;
+}
+
+.header {
+    padding-top: 50px;
+
+    &-phone {
+        display: block;
+        font-weight: 500;
+        color: @phone-color;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    &-info {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 7px;
+        display: block;
+        text-align: right;
+    }
+
+    &-callback {
+        color: @header-callback-color;
+        text-align: right;
+        display: block;
+        margin-top: 16px;
+        font-size: 16px;
+    }
+}
+
+.hero {
+    padding-top: 100px;
+    padding-bottom: 77px;
+    text-align: center;
+    border-bottom: 1px solid #4c4c4c;
+
+    &-title {
+        .gotham_med();
+        font-size: 34px;
+        margin-bottom: 34px;
+        text-transform: uppercase;
+        line-height: normal;
+        letter-spacing: 0.34px;
+        max-width: 652px;
+        margin: auto;
+    }
+
+    &-description {
+        .gotham_light();
+        font-size: 18px;
+        margin: auto;
+        margin-bottom: 87px;
+        text-transform: uppercase;
+        letter-spacing: 0.18px;
+        line-height: 1.4;
+        max-width: 590px;
+    }
+
+    &-cta {
+        .gotham_light();
+        display: block;
+        font-size: 19px;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+    }
+}
+
+.flowers-slider {
+    width: 100%;
+    margin-bottom: 83px;
+    margin-top: 87px;
+}
+
+:root {
+    --swiper-navigation-size: 18px;
+}
+
+
+
+.slide-image {
+    width: 85px;
+    height: 85px;
+}
+
+.button {
+    .gotham_med();
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @button-text-color;
+    background-color: @button-bg-color;
+    padding: 30px 65px 26px 65px;
+    margin-top: 36px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.reviews {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    &-slider {
+        margin-top: 98px;
+    }
+
+    &-slide {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    &-image {
+        .gotham_pro();
+        width: 220px;
+        height: 220px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        font-size: 20px;
+        position: relative;
+        margin-right: 50px;
+
+        &>* {
+            position: relative;
+        }
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+
+        &-1 {
+            background: @review-bg_1;
+        }
+
+        &-2 {
+            background: @review-bg_2;
+        }
+
+        &-3 {
+            background: @review-bg_3;
+        }
+
+        &-4 {
+            background: @review-bg_4;
+        }
+
+        &-5 {
+            background: @review-bg_5;
+        }
+    }
+
+    &-text_p {
+        font-size: 18px;
+        letter-spacing: 0.18px;
+        line-height: 1.4;
+    }
+
+    &-link {
+        color: #f24841;
+    }
+
+    &-name {
+        margin-bottom: 7px;
+    }
+
+    &-title {
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.3px;
+
+    }
+}
+
+.advantages {
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    border-bottom: 1px solid #4c4c4c;
+
+    &-wrapper {
+        min-height: 85px;
+        margin-bottom: 30px;
+    }
+
+    &-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 1.4;
+        min-width: 270px;
+        margin: auto;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    margin: -30px;
+    padding: 30px;
+
+    &:hover {
+        color: #ff2e55;
+    }
+
+}
+
+.goods {
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    &-description {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.card {
+    text-align: center;
+    border: 3px solid #fff;
+    padding: 33px 35px 30px 35px;
+    margin-top: 27px;
+
+    &-title {
+        margin-top: 23px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    &-label {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 7px;
+        margin-top: 20px;
+    }
+
+    img {
+        height: 80px;
+        width: 120px;
+
+    }
+
+    &-button {
+        font-size: 15px;
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.color {
+    &-label {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &.white {
+            background-color: #fff;
+        }
+
+        &.biege {
+            background-color: #f7b496;
+        }
+
+        &.pink {
+            background-color: #ed366e;
+        }
+
+        &.red {
+            background-color: #ff0000;
+        }
+
+        &.blue {
+            background-color: #12129d;
+        }
+    }
+
+    &-input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: -9;
+    }
+
+
+}
+
+
+.counter {
+    &-input {
+        border: 2px solid #fff;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        background-color: #292929;
+        color: #fff;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    &-button {
+        font-size: 16px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #292929;
+        border: none;
+
+    }
+}
+
+.more {
+    font-size: 14px;
+    color: #f24841;
+    display: block;
+    text-align: center;
+    margin-top: 39px;
+    padding: 10px;
+
+    &:after {
+        display: inline-block;
+        content: '';
+        width: 10px;
+        height: 4px;
+        background: url('../img/arrow-dwn.svg') no-repeat center;
+        margin-left: 14px;
+        vertical-align: middle;
+    }
+}
+
+.offer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #1a1a1a;
+    text-align: center;
+
+    &-link {
+        text-transform: uppercase;
+        color: #fff;
+        display: block;
+        font-size: 30px;
+        margin-bottom: 65px;
+    }
+
+    &-label {
+        display: block;
+        margin-bottom: 22px;
+        font-size: 14px;
+
+    }
+
+    &-phone {
+        font-size: 36px;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.footer {
+    &-menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 33px;
+
+        &__link {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+        &__item {
+            margin-right: 30px;
+        }
+    }
+
+    &-label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 12px;
+
+    }
+
+    &-info {
+        text-align: right;
+    }
+
+    &-phone {
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+
+    &-sign {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    &-callback {
+        color: @color-black;
+        text-decoration: none;
+        border-bottom: 2px solid @color-black;
+    }
+
+}
+
+.social {
+    font-size: 16px;
+
+    &-link img {
+        width: 25px;
+        height: 25px;
+        vertical-align: text-bottom;
+
+    }
+}
+
+
+.black {
+    background-color: #fff;
+    color: @color-black;
+}
+
+
+.modal {
+    display: none;
+
+    &-title {
+        color: #292929;
+    }
+
+    &-input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    &-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+
+        &__contacts {
+            text-align: center;
+        }
+    }
+
+    .hero {
+        padding-top: 50px;
+
+        &-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        &-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    }
+
+    .button {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .colors {
+        min-width: 200px;
+        margin: auto;
+    }
+
+    .card-label {
+        margin: 20px auto;
+        display: block;
+    }
+
+    .footer-info {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .offer,
+    .footer-info,
+    .offer-title__left {
+        text-align: left;
+    }
+}
