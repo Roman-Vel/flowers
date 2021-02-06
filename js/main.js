@@ -37,6 +37,8 @@ $(document).ready(function () {
         prevEl: '.slider-button-prev',
       },
     });
+
+
     //событие review-1 при клике на кнопку reviews-link
     $("#review-1").on('click', function() {
 
@@ -63,4 +65,28 @@ $(document).ready(function () {
       });
     
     });
+//счетчик количества товара
+  //   $('.minus').click(function () {
+  //     var $input = $(this).parent().find('input');
+  //     var count = parseInt($input.val()) - 1;
+  //     count = count < 1 ? 1 : count;
+  //     $input.val(count);
+  //     $input.change();
+  //     return false;
+  // });
+  // $('.plus').click(function () {
+  //     var $input = $(this).parent().find('input');
+  //     $input.val(parseInt($input.val()) + 1);
+  //     $input.change();
+  //     return false;
+  // });
+
+  //ПОКАЗАТЬ ЕЩЕ
+  $('.more').click(function() {
+    $('.show-more').fadeIn();
+    $(this).fadeOut("fast");
+  });
+     
+
 });
+

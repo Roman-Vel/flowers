@@ -246,7 +246,7 @@ body {
   margin-top: 20px;
 }
 .card img {
-  height: 80px;
+  height: 120px;
   width: 120px;
 }
 .card-button {
@@ -277,6 +277,9 @@ body {
 .color-label.blue {
   background-color: #12129d;
 }
+.color-label.yellow {
+  background-color: #d7b227;
+}
 .color-input {
   opacity: 0;
   visibility: hidden;
@@ -299,6 +302,9 @@ body {
   color: #fff;
   background-color: #292929;
   border: none;
+}
+.show-more {
+  display: none;
 }
 .more {
   font-size: 14px;
